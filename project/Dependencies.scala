@@ -63,6 +63,7 @@ object Dependencies {
   private val quicklens                      = "com.softwaremill.quicklens"          %% "quicklens"                       % "1.4.12"
   private val fastUuid                       = "com.eatthepath"                       % "fast-uuid"                       % "0.1"
   private val pebble                         = "io.pebbletemplates"                   % "pebble"                          % "3.0.10"
+  private val dogstatsd                      = "com.datadoghq"                        % "java-dogstatsd-client"           % "2.8"
 
   // Test dependencies
   private val scalaTest                      = "org.scalatest"                       %% "scalatest"                       % "3.0.8"             % "test"
@@ -109,6 +110,8 @@ object Dependencies {
   val chartsDependencies = tdigest +: testDeps
 
   val graphiteDependencies = hdrHistogram +: testDeps
+
+  var datadogDependencies = Seq(hdrHistogram, dogstatsd) ++ testDeps
 
   val benchmarkDependencies = Seq(jmh)
 

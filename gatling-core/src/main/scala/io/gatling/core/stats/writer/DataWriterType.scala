@@ -18,7 +18,7 @@ package io.gatling.core.stats.writer
 
 object DataWriterType {
 
-  private val AllTypes = Seq(ConsoleDataWriterType, FileDataWriterType, GraphiteDataWriterType, LeakReporterDataWriterType)
+  private val AllTypes = Seq(ConsoleDataWriterType, FileDataWriterType, GraphiteDataWriterType, DataDogDataWriterType, LeakReporterDataWriterType)
     .map(t => t.name -> t).toMap
 
   def findByName(name: String): Option[DataWriterType] = AllTypes.get(name)
@@ -28,4 +28,5 @@ sealed abstract class DataWriterType(val name: String, val className: String)
 object ConsoleDataWriterType extends DataWriterType("console", "io.gatling.core.stats.writer.ConsoleDataWriter")
 object FileDataWriterType extends DataWriterType("file", "io.gatling.core.stats.writer.LogFileDataWriter")
 object GraphiteDataWriterType extends DataWriterType("graphite", "io.gatling.graphite.GraphiteDataWriter")
+object DataDogDataWriterType extends DataWriterType("datadog", "io.gatling.datadog.DataDogDataWriter")
 object LeakReporterDataWriterType extends DataWriterType("leak", "io.gatling.core.stats.writer.LeakReporterDataWriter")

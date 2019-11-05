@@ -1,0 +1,66 @@
+gatling.user
+
+tag:
+simulation: prodloadsimulation
+scenario: Inventory Service - Prod Traffic
+status: waiting,active,done
+
+gatling.prodloadsimulation.users.Inventory_Service_-_Prod_Traffic.active 2 1566098823
+gatling.prodloadsimulation.users.Inventory_Service_-_Prod_Traffic.waiting 8 1566098823
+gatling.prodloadsimulation.users.Inventory_Service_-_Prod_Traffic.done 0 1566098823
+
+
+gatling.request.count
+simulation: prodloadsimulation
+scenario: Get-Bulk-Inventory
+api: /api/search
+tag: is_success
+
+gatling.request.max
+gatling.request.mean
+gatling.request.min
+gatling.request.p50
+gatling.request.p75
+gatling.request.p95
+gatling.request.p99
+gatling.request.std_dev
+
+tags:
+simulation: prodloadsimulation
+scenario: Get-Bulk-Inventory
+api: /api/search
+
+gatling.prodloadsimulation.get-bulk-inventory_(/api/search).ok.count 2 1566098823
+gatling.prodloadsimulation.get-bulk-inventory_(/api/search).ok.min 94 1566098823
+gatling.prodloadsimulation.get-bulk-inventory_(/api/search).ok.max 126 1566098823
+gatling.prodloadsimulation.get-bulk-inventory_(/api/search).ok.mean 110 1566098823
+gatling.prodloadsimulation.get-bulk-inventory_(/api/search).ok.stdDev 16 1566098823
+gatling.prodloadsimulation.get-bulk-inventory_(/api/search).ok.percentiles50 94 1566098823
+gatling.prodloadsimulation.get-bulk-inventory_(/api/search).ok.percentiles75 126 1566098823
+gatling.prodloadsimulation.get-bulk-inventory_(/api/search).ok.percentiles95 126 1566098823
+gatling.prodloadsimulation.get-bulk-inventory_(/api/search).ok.percentiles99 126 1566098823
+gatling.prodloadsimulation.get-bulk-inventory_(/api/search).ko.count 0 1566098823
+gatling.prodloadsimulation.update-inventory-bulk_(/api/inventory/).ok.count 0 1566098823
+gatling.prodloadsimulation.update-inventory-bulk_(/api/inventory/).ko.count 0 1566098823
+
+
+gatling.user.active
+galting.user.waiting
+galting.user.done
+
+tag:
+simulation: prodloadsimulation
+scenario: Inventory Service - Prod Traffic
+
+DataDogPath(List(waiting, Inventory Service - Prod Traffic, users)) 0
+DataDogPath(List(done, Inventory Service - Prod Traffic, users)) 0
+DataDogPath(List(count, ok, get-bulk-inventory (/api/search))) 1
+DataDogPath(List(min, ok, get-bulk-inventory (/api/search))) 390
+DataDogPath(List(max, ok, get-bulk-inventory (/api/search))) 391
+DataDogPath(List(mean, ok, get-bulk-inventory (/api/search))) 391
+DataDogPath(List(stdDev, ok, get-bulk-inventory (/api/search))) 0
+DataDogPath(List(percentiles50, ok, get-bulk-inventory (/api/search))) 391
+DataDogPath(List(percentiles75, ok, get-bulk-inventory (/api/search))) 391
+DataDogPath(List(percentiles95, ok, get-bulk-inventory (/api/search))) 391
+DataDogPath(List(percentiles99, ok, get-bulk-inventory (/api/search))) 391
+DataDogPath(List(count, ko, get-bulk-inventory (/api/search))) 0

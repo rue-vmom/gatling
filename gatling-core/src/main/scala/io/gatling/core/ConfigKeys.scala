@@ -146,6 +146,13 @@ object ConfigKeys {
       val BufferSize = "gatling.data.graphite.bufferSize"
       val WritePeriod = "gatling.data.graphite.writePeriod"
     }
+    object datadog {
+      val Host = "gatling.data.datadog.host"
+      val Port = "gatling.data.datadog.port"
+      val RootPathPrefix = "gatling.data.datadog.rootPathPrefix"
+      val BufferSize = "gatling.data.datadog.bufferSize"
+      val WritePeriod = "gatling.data.datadog.writePeriod"
+    }
   }
 
   // [fl]
